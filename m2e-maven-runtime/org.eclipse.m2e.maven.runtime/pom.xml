@@ -182,11 +182,18 @@
             <Import-Package>
               !*
             </Import-Package>
-            <Require-Bundle>com.ning.async-http-client;bundle-version="[1.6.5,1.6.6)"</Require-Bundle>
+            <Require-Bundle>
+              com.ning.async-http-client;bundle-version="[1.6.5,1.6.6)",
+              org.slf4j.api;bundle-version="1.6.2"
+            </Require-Bundle>
 
             <Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
           </instructions>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-p2-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

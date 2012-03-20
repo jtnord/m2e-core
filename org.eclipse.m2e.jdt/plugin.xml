@@ -358,5 +358,13 @@
    <extension
          point="org.eclipse.m2e.core.lifecycleMappingMetadataSource">
    </extension>
-
+   <extension
+         point="org.eclipse.m2e.core.projectConversionParticipants">
+      <projectConversionParticipant
+            class="org.eclipse.m2e.jdt.internal.JavaProjectConversionParticipant"
+            id="org.eclipse.m2e.jdt.javaProjectConversionParticipant"
+            name="%java.conversion.participant.name"
+            nature="org.eclipse.jdt.core.javanature">
+      </projectConversionParticipant>   
+   </extension>
 </plugin>
