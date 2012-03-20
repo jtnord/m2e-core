@@ -30,6 +30,8 @@
     <sisu.version>2.3.0</sisu.version>
     <aether.version>1.13.1</aether.version>
 
+    <guava.version>10.0.1</guava.version>
+
     <!-- below are m2e-specific addons -->
     <plexus-build-api.version>0.0.7</plexus-build-api.version>
     <wagon-ahc.version>1.2.1</wagon-ahc.version>
@@ -100,7 +102,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>10.0.1</version>
+      <version>${guava.version}</version>
     </dependency>
 
     <dependency>
