@@ -90,6 +90,17 @@
       <version>${sisu-guice.version}</version>
       <classifier>no_aop</classifier>
       <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <artifactId>sisu-guava</artifactId>
+          <groupId>org.sonatype.sisu</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>10.0.1</version>
     </dependency>
 
     <dependency>
