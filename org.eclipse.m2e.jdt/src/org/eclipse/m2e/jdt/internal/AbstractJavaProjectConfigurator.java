@@ -416,8 +416,9 @@ public abstract class AbstractJavaProjectConfigurator extends AbstractProjectCon
           IClasspathEntryDescriptor enclosing = getEnclosingEntryDescriptor(classpath, r.getFullPath());
           if(enclosing == null || isResourceDescriptor(getEntryDescriptor(classpath, r.getFullPath()))) {
             log.info("Adding resource folder " + r.getFullPath());
-            classpath.addSourceEntry(r.getFullPath(), outputPath, new IPath[0] /*inclusions*/, new IPath[] {new Path(
-                "**")} /*exclusion*/, false /*optional*/);
+            classpath.addSourceEntry(r.getFullPath(), outputPath, 
+                                     new IPath[] {new Path("**/.m2e_ignored")} /*inclusions*/, 
+                                     new IPath[0] /*exclusion*/, false /*optional*/);
           } else {
             // resources and sources folders overlap. make sure JDT only processes java sources.
             log.info("Resources folder " + r.getFullPath() + " overlaps with sources folder " + enclosing.getPath());
